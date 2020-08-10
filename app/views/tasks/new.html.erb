@@ -1,0 +1,12 @@
+<h1>タスクの新規登録</h1>
+
+<%= link_to '一覧', tasks_path %>
+
+<%= form_with model: @task do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, id: 'task_name' %>
+  <%= form.label :description %>
+  <%= form.text_area :description, row: 5, id: 'task_description' %>
+
+  <%= form.submit nil %>
+<% end %>
